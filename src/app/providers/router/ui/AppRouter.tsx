@@ -1,21 +1,19 @@
-import React, {Suspense} from 'react';
-import {Route, Routes} from "react-router-dom";
-import {routeConfig} from "shered/config/routeConfig/routeConfig";
+import React, { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { routeConfig } from 'shered/config/routeConfig/routeConfig';
 
-const AppRouter = () => {
-    return (
-        <Suspense fallback={<div>Загрузка...</div>}>
-            <Routes>
-                {Object.values(routeConfig).map(({element, path}) => (
-                    <Route
-                        key={path}
-                        path={path}
-                        element={(<div className="page-wrapper">{element}</div>)}
-                    />
-                ))}
-            </Routes>
-        </Suspense>
-    );
-};
+const AppRouter = () => (
+    <Suspense fallback={<div>Загрузка...</div>}>
+        <Routes>
+            {Object.values(routeConfig).map(({ element, path }) => (
+                <Route
+                    key={path}
+                    path={path}
+                    element={(<div className="page-wrapper">{element}</div>)}
+                />
+            ))}
+        </Routes>
+    </Suspense>
+);
 
 export default AppRouter;
