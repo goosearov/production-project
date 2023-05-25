@@ -1,17 +1,15 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';
-import {
-    renderWithTranslation,
-} from 'shered/lib/tests/renderWithTranslation/renderWithTranslation';
+import { componentRender } from 'shered/lib/tests/componentRender/componentRender';
 
 describe('Sidebar', () => {
     test('Sidebar render', () => {
-        renderWithTranslation(<Sidebar />);
+        componentRender(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
     test('Sidebar toggle', () => {
-        renderWithTranslation(<Sidebar />);
+        componentRender(<Sidebar />);
         const toggleButton = screen.getByTestId('sidebar-toggle');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(toggleButton);
