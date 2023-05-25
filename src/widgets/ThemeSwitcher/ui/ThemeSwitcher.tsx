@@ -3,7 +3,7 @@ import { Theme, useTheme } from 'app/providers/ThemeProvider';
 
 import LightIcon from 'shered/assets/icons/theme-light.svg';
 import DarkIcon from 'shered/assets/icons/theme-dark.svg';
-import { Button, ThemeButton } from 'shered/ui/Button/Button';
+import { Button, ButtonTheme } from 'shered/ui/Button/Button';
 
 interface ThemeSwitcherProps {
     className?: string;
@@ -13,7 +13,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
     const { theme, toggleTheme } = useTheme();
     return (
         <Button
-            theme={ThemeButton.CLEAR}
+            theme={ButtonTheme.CLEAR}
             className={classNames('', {}, [className])}
             onClick={toggleTheme}
         >

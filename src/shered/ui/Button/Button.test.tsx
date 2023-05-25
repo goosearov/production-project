@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Button, ThemeButton } from 'shered/ui/Button/Button';
+import { Button, ButtonTheme } from 'shered/ui/Button/Button';
 
 describe('Button', () => {
     test('Test render', () => {
@@ -8,7 +8,7 @@ describe('Button', () => {
     });
 
     test('Test cleat theme', () => {
-        render(<Button theme={ThemeButton.CLEAR}>Test</Button>);
+        render(<Button theme={ButtonTheme.CLEAR}>Test</Button>);
         expect(screen.getByText('Test')).toHaveClass('clear');
         screen.debug();
     });
