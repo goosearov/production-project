@@ -3,9 +3,12 @@
  * https://jestjs.io/docs/configuration
  */
 
-import path = require('path');
+import path from 'path';
 
 export default {
+    globals: {
+        __IS_DEV__: true,
+    },
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
