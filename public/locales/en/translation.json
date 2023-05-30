@@ -11,5 +11,8 @@
   "о нас": "about",
   "Войти": "Войти",
   "Введите username": "Enter username",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Authorization form",
+  "Неверные данные": "Uncorrected data",
+  "Выйти": "Logout"
 }

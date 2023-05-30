@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shered/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { StoreDecorator } from 'shered/config/storybook/StoreDecorator/StoreDecorator';
 import { LoginForm } from './LoginForm';
 
 export default {
@@ -16,7 +17,18 @@ const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args
 
 export const Primary = Template.bind({});
 Primary.args = {};
+Primary.decorators = [StoreDecorator({
+    loginForm: { username: '123', password: '456' },
+})];
 
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {};
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+export const withError = Template.bind({});
+withError.args = {};
+withError.decorators = [StoreDecorator({
+    loginForm: { username: '123', password: '456', error: 'error' },
+})];
+
+export const withLoading = Template.bind({});
+withLoading.args = {};
+withLoading.decorators = [StoreDecorator({
+    loginForm: { username: '123', password: '456', isLoading: true },
+})];
