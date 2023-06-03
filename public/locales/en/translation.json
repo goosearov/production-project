@@ -9,10 +9,11 @@
   "короткий язык": "En",
   "главная": "main",
   "о нас": "about",
-  "Войти": "Войти",
+  "Войти": "Login",
   "Введите username": "Enter username",
   "Введите пароль": "Enter password",
   "Форма авторизации": "Authorization form",
   "Неверные данные": "Uncorrected data",
-  "Выйти": "Logout"
+  "Выйти": "Logout",
+  "профиль": "profile"
 }
