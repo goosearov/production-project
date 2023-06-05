@@ -1,4 +1,4 @@
-import { classNames } from 'shered/lib/classNames/classNames';
+import { classNames, Mods } from 'shered/lib/classNames/classNames';
 import {
     ButtonHTMLAttributes, memo, ReactNode,
 } from 'react';
@@ -30,7 +30,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 export const Button = memo((props: ButtonProps) => {
     const {
         className,
-        theme,
+        theme = ButtonTheme.OUTLINE,
         children,
         square,
         size = ButtonSize.M,
@@ -38,7 +38,7 @@ export const Button = memo((props: ButtonProps) => {
         ...otherProps
     } = props;
 
-    const mods = {
+    const mods: Mods = {
         [cls.square]: square,
         [cls.disabled]: disabled,
     };
