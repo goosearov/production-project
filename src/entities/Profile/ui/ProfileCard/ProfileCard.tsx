@@ -1,11 +1,9 @@
 import { classNames } from 'shered/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Text, TextAlign, TextTheme } from 'shered/ui/Text/Text';
-import { Button, ButtonTheme } from 'shered/ui/Button/Button';
 import { Input } from 'shered/ui/Input/Input';
 import { Loader } from 'shered/ui/Loader/Loader';
 import { Avatar } from 'shered/ui/Avatar/Avatar';
-import { Select } from 'shered/ui/Select/Select';
 import React from 'react';
 import { Currency } from 'entities/Currency/model/types/currency';
 import { CurrencySelect } from 'entities/Currency';
