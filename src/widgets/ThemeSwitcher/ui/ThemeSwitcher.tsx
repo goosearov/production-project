@@ -1,10 +1,10 @@
 import { classNames } from 'shered/lib/classNames/classNames';
-import { Theme, useTheme } from 'app/providers/ThemeProvider';
+import { useTheme } from 'app/providers/ThemeProvider';
 
 import LightIcon from 'shered/assets/icons/theme-light.svg';
-import DarkIcon from 'shered/assets/icons/theme-dark.svg';
 import { Button, ButtonTheme } from 'shered/ui/Button/Button';
 import { memo } from 'react';
+import { Icon } from 'shered/ui/Icon/Icon';
 
 interface ThemeSwitcherProps {
     className?: string;
@@ -18,7 +18,8 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
             className={classNames('', {}, [className])}
             onClick={toggleTheme}
         >
-            {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
+            {/* {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />} */}
+            <Icon Svg={LightIcon} iconTheme />
         </Button>
     );
 });
