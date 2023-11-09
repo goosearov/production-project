@@ -126,6 +126,12 @@
       "userId": "2",
       "text": "hello",
       "id": "RGv9GnG"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asdf",
+      "id": "VkKYE_v"
     }
   ],
   "users": [
